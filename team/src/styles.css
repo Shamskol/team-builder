@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+.TeamForm,
+#root {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+.TeamForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .TeamForm {
+    text-align: center;
+  }
+  
+  .TeamForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .TeamForm form label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+ 
+  
+  .TeamForm form input,
+  .TeamForm form select {
+    margin-bottom: 25px;
+  }
