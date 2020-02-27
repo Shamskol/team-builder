@@ -7,14 +7,21 @@ export default function TeamForm(props) {
     id: "",
     firstName: "",
     lastName: "",
-    role: "",
+
+    role: ""
   });
 
   console.log(teamMember);
   function submitHandler(e) {
     e.preventDefault();
-    e.persist();
-    setTeamMember([...props.team, teamMember]);
+    props.setTeam([...props.team, teamMember]);
+    setTeamMember({
+      id: "",
+      firstName: "",
+      lastName: "",
+
+      role: ""
+    });
   }
 
   function changeHandler(e) {
@@ -25,7 +32,7 @@ export default function TeamForm(props) {
   return (
     <div className="TeamForm">
       <form type="submit" onSubmit={submitHandler}>
-      <label htmlFor="form-id">id</label>
+        <label htmlFor="form-id">id</label>
         <input
           type="text"
           name="id"
@@ -46,13 +53,12 @@ export default function TeamForm(props) {
         <label>Last Name</label>
         <input
           type="text"
-          name="lastname"
-          placeholder="Enter your first name here"
-          value={teamMember.lastname}
+          name="lastName"
+          placeholder="Enter your last name here"
+          value={teamMember.lastName}
           onChange={changeHandler}
         />
         <br />
-        
 
         <label htmlFor="form-role">Role</label>
         <input
